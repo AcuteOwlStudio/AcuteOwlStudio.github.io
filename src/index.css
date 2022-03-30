@@ -1,0 +1,39 @@
+body{
+  background-color: hsl(232, 67%, 19%);
+  color: white;
+}
+
+nav li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.container {
+  margin: auto;
+}
+@media (min-width: 45em) {
+  .container {
+    width: 60%;
+  }
+}
+
+.navbar {
+  background-color: hsla(0 100% 0% 0.5);
+}
+
+.logo {
+  align-self: center;
+}
+
+.links {
+  margin-left: auto;
+}
