@@ -1,6 +1,29 @@
+.alignCenter {
+  align-items: center;
+  justify-content: center;
+}
+.cursor {
+  cursor: pointer;
+}
+
+/******************************/
+/******************************/
+/******************************/
+/******************************/
+
 body{
-  background-color: hsl(232, 67%, 19%);
+  background-color: #0b2310;
+  margin: 0;
   color: white;
+  font-family: sans-serif;
+}
+
+h1, p {
+  margin: 0.25em;
+}
+
+ul {
+  padding-inline-start: 0;
 }
 
 nav li {
@@ -16,24 +39,184 @@ a {
   display: flex;
   gap: var(--gap, 1rem);
 }
+.flexWrap {
+  flex-wrap: wrap;
+}
 
 .container {
   margin: auto;
 }
 @media (min-width: 45em) {
   .container {
-    width: 60%;
+    min-width: 45em;
+    max-width: 60%;
+    /* width: 60%; */
   }
 }
 
 .navbar {
-  background-color: hsla(0 100% 0% 0.5);
+  background-color: hsla(0, 100%, 0%, 0.5);
+  padding: 1em 0 1em 1em;
+  box-shadow: 0 0 0.25em 0.25em hsla(129, 100%, 5%, 0.75);
 }
-
 .logo {
   align-self: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  white-space: nowrap;
+  text-overflow: " ";
 }
-
+.logoImg {
+  width: 3em;
+  height: 100%;
+}
 .links {
   margin-left: auto;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+nav ul a {
+  color: hsla(360, 100%, 100%, 0.5);
+}
+nav a:hover {
+  color: yellow;
+}
+@media (min-width:45rem) {
+  .navbar {
+    padding-left: 0;
+  }
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+#primary-navigation[data-visible="true"] {
+  transform: translateX(0);
+}
+.mobile-nav-toggle[aria-expanded="true"]{
+  background-image: url(../public/icon-close.svg);
+}
+@media(max-width: 45rem) {
+  #primary-navigation {
+    position: fixed;
+    inset: 0 0 0 50%;
+    padding: min(20rem, 10vh) 2rem;
+    margin: 0;
+    background-color: hsla(0, 100%, 0%);
+    flex-direction: column;
+    list-style: none;
+    transform: translateX(100%);
+    transition: transform 500ms ease-in-out;
+  }
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    z-index: 2000;
+    right: 2rem;
+    top: 1.75rem;
+    background: transparent;
+    background-image: url(../public/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1.5rem;
+    aspect-ratio: 1;
+    border: 0;
+  }
+}
+
+.gameCard {
+  display: grid;
+  text-align: center;
+}
+.cardImage {
+  height: 30em;
+  border-radius: 1em;
+  box-shadow: 0 0 1em 0.25em hsla(129, 100%, 5%, 0.75);
+}
+.cardDesc {
+  display: none;
+  padding: 0 1em;
+  overflow: hidden;
+  align-content: center;
+}
+.cardDesc[data-visible="true"] {
+  display: block;
+}
+.cardDesc::-webkit-scrollbar {
+  display: none;
+}
+iframe {
+  width: 100%;
+}
+@media (min-width:45rem) {
+  .gameCard {
+    display: flex;
+    text-align: left;
+    border: black 2px solid;
+    border-radius: 1em;
+    background-color: hsla(22, 80%, 10%, 0.75);
+  }
+  .gameCard a {
+    margin-top: 0;
+    margin-bottom: -4px;
+  }
+}
+
+.contactContainer {
+  width:90%;
+  margin: auto;
+}
+#contact {
+  background: black;
+  border-radius: 1em;
+  padding: 1em;
+  margin-top: 5em;
+  margin-bottom: 1em;
+}
+#contact p {
+  margin-left: 0;
+}
+.messageInput {
+  width: 100%;
+  max-width: 100%;
+}
+@media (min-width: 45em){
+  .contactContainer {
+    width: 40%;
+  }
+  #contact {
+    margin-top: 10em;
+  }
+}
+
+.button {
+  background-color: black;
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: gray;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background-color: hsla(0, 100%, 0%, 0.5);
+}
+
+/* used for assistive technologies like programs that read off a screen to the user */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border:0;
 }

@@ -1,10 +1,13 @@
 import React from 'react';
 import Header from './components/header.jsx';
+import Footer from './components/footer.jsx';
 
 function Blog() {
   return (
     <div>
-      <Header/>
+      <main className="container">
+        Blog
+      </main>
     </div>
   );
 }
