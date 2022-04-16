@@ -12,14 +12,15 @@
 /******************************/
 
 body{
-  background-color: #0b2310;
+  background-color: hsl(195, 73%, 16%);
   margin: 0;
-  color: white;
+  color: hsl(0, 0%, 95%);
   font-family: sans-serif;
 }
 
 h1, p {
   margin: 0.25em;
+  margin-left: 0;
 }
 
 ul {
@@ -57,7 +58,7 @@ a {
 .navbar {
   background-color: hsla(0, 100%, 0%, 0.5);
   padding: 1em 0 1em 1em;
-  box-shadow: 0 0 0.25em 0.25em hsla(129, 100%, 5%, 0.75);
+  box-shadow: 0 0 0.25em 0.25em hsl(195, 73%, 5%);
 }
 .logo {
   align-self: center;
@@ -124,73 +125,8 @@ nav a:hover {
   }
 }
 
-.gameCard {
-  display: grid;
-  text-align: center;
-}
-.cardImage {
-  height: 30em;
-  border-radius: 1em;
-  box-shadow: 0 0 1em 0.25em hsla(129, 100%, 5%, 0.75);
-}
-.cardDesc {
-  display: none;
-  padding: 0 1em;
-  overflow: hidden;
-  align-content: center;
-}
-.cardDesc[data-visible="true"] {
-  display: block;
-}
-.cardDesc::-webkit-scrollbar {
-  display: none;
-}
-iframe {
-  width: 100%;
-}
-@media (min-width:45rem) {
-  .gameCard {
-    display: flex;
-    text-align: left;
-    border: black 2px solid;
-    border-radius: 1em;
-    background-color: hsla(22, 80%, 10%, 0.75);
-  }
-  .gameCard a {
-    margin-top: 0;
-    margin-bottom: -4px;
-  }
-}
-
-.contactContainer {
-  width:90%;
-  margin: auto;
-}
-#contact {
-  background: black;
-  border-radius: 1em;
-  padding: 1em;
-  margin-top: 5em;
-  margin-bottom: 1em;
-}
-#contact p {
-  margin-left: 0;
-}
-.messageInput {
-  width: 100%;
-  max-width: 100%;
-}
-@media (min-width: 45em){
-  .contactContainer {
-    width: 40%;
-  }
-  #contact {
-    margin-top: 10em;
-  }
-}
-
 .button {
-  background-color: black;
+  background-color: hsl(195, 73%, 5%);
   border-radius: 0.5em;
   padding: 0.5em 1em;
   color: white;
@@ -205,7 +141,7 @@ footer {
   position: fixed;
   width: 100%;
   bottom: 0;
-  background-color: hsla(0, 100%, 0%, 0.5);
+  background-color: hsl(195, 73%, 5%);
 }
 
 /* used for assistive technologies like programs that read off a screen to the user */
@@ -219,4 +155,193 @@ footer {
   clip: rect(0,0,0,0);
   white-space: nowrap;
   border:0;
+}
+
+.xPadding {
+  padding: 0 2em;
+}
+.bPadding {
+  padding-bottom: 1em;
+}
+
+@media (min-width: 45rem){
+  .hideDesktop {
+    display: none;
+  }
+}
+
+/*****************************************************************/
+/*****************************************************************/
+/*****************************************************************/
+/*Home page*/
+
+.bannerBack {
+  background-color: hsl(195, 73%, 5%);
+  border: hsla(0, 100%, 0%, 0.65) solid 2px;
+  box-shadow: 0 0 1em 0.25em hsl(195, 73%, 5%);
+  text-align: center;
+}
+.banner {
+  width: 100%;
+
+}
+.logoTitle {
+  width: 80%;
+  display: block;
+  margin: auto;
+  padding-bottom: 1em;
+}
+.homePost {
+  margin-top: 1em;
+  margin-bottom: 5em;
+}
+#home iframe {
+  box-shadow: 0 0 1em 0.25em hsl(195, 73%, 5%);
+}
+@media (min-width: 45em) {
+  .bannerBack {
+    border-radius: 1em;
+  }
+  .banner {
+    border-radius: 1em;
+  }
+}
+
+
+
+/*****************************************************************/
+/*****************************************************************/
+/*****************************************************************/
+/*Game page*/
+
+.gameCard {
+  display: grid;
+  text-align: center;
+  box-shadow: 0 0 1em 0.25em hsl(195, 73%, 5%);
+}
+.gameCardOrientation {
+  display: grid;
+}
+.cardImage {
+  height: 30em;
+  border-radius: 1em;
+
+}
+.cardDesc {
+  display: block;
+  padding: 0 1em;
+  overflow: hidden;
+  align-content: center;
+}
+.cardDesc::-webkit-scrollbar {
+  display: none;
+}
+iframe {
+  width: 100%;
+}
+.gameButtons {
+  align-self: center;
+  display: grid;
+}
+.gameCardButton {
+  /* background-color: hsl(195, 73%, 16%); */
+  border-radius: 0.5em;
+  padding: 0.5em 0.75em;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 0.5em;
+}
+.gameCardButton:hover{
+  background-color: hsl(195, 73%, 14%);
+  color: yellow;
+}
+@media (min-width:45rem) {
+  .gameCard {
+    display: flex;
+    text-align: left;
+    border: black 2px solid;
+    border-radius: 1em;
+    background-color: hsl(195, 73%, 5%);
+  }
+  .gameCard a {
+    margin-top: 0;
+    margin-bottom: -4px;
+  }
+  .gameCardOrientation {
+    display: flex;
+  }
+  .gameButtons {
+    display: flex;
+    margin-left: auto;
+  }
+}
+
+/*****************************************************************/
+/*****************************************************************/
+/*****************************************************************/
+/*Blog page*/
+
+.postBack {
+  background-color: hsl(195, 73%, 5%);
+  box-shadow: 0 0 1em 0.25em hsl(195, 73%, 5%);
+  border: black 2px solid;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+.postBack h2 {
+  margin-bottom: 0;
+}
+.postBack hr {
+  margin-bottom: 1em;
+}
+.postDate {
+  align-self: flex-end;
+  margin-bottom: 2px;
+  margin-left: auto;
+}
+
+@media (min-width:45em) {
+  .postBack {
+    border-radius: 1em;
+  }
+  .postContents {
+    width: 90%;
+    padding-left: 2em;
+  }
+}
+
+/*****************************************************************/
+/*****************************************************************/
+/*****************************************************************/
+/*Contact page*/
+
+.contactContainer {
+  width:90%;
+  margin: auto;
+  background-color:
+}
+#contact {
+  background: hsl(195, 73%, 5%);
+  border-radius: 1em;
+  padding: 1em;
+  margin-top: 5em;
+  margin-bottom: 1em;
+}
+#contact p {
+  margin-left: 0;
+}
+.messageInput {
+  width: 100%;
+  max-width: 100%;
+  min-height: 6em;
+  margin-bottom: 1em;
+}
+@media (min-width: 45em){
+  .contactContainer {
+    width: 40%;
+  }
+  #contact {
+    margin-top: 10em;
+  }
 }

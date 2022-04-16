@@ -6,9 +6,12 @@ function Games() {
   return (
     <div>
       <br/>
+      <br/>
       <main className="container flex flexWrap alignCenter">
-        <Game dataSet={Data[0]}/>
-        <Game dataSet={Data[1]}/>
+        {Data.map(game => (
+          <Game dataSet={game}/>
+        ))}
+
       </main>
     </div>
   );

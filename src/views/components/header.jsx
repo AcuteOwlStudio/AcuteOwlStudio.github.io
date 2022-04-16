@@ -16,13 +16,16 @@ function Header() {
             <li><Link to="/Blog">Blog</Link></li>
             <li><Link to="/About">About</Link></li>
             <li><Link to="/Contact">Contact</Link></li>
-            <li><a href="https://www.youtube.com/channel/UC5LV-fAAlBFpidSv1wktJeA" className="github"><i className="fa-brands fa-youtube"></i><span className="sr-only">My youtube page</span></a></li>
-            <li><a href="https://discord.com/invite/rDfrqNykzM" className="github"><i className="fa-brands fa-discord"></i><span className="sr-only">My discord page</span></a></li>
+            <li><a href="https://www.youtube.com/channel/UC5LV-fAAlBFpidSv1wktJeA" target="_blank" className="github"><i className="fa-brands fa-youtube"></i><span className="sr-only">Youtube</span></a></li>
+            <li><a href="https://www.instagram.com/acute_owl_studio/?hl=en" target="_blank" className="github"><i className="fa-brands fa-instagram"></i><span className="sr-only">Instagram</span></a></li>
+            <li><a href="https://www.tiktok.com/@acuteowlstudio" target="_blank" className="github"><i className="fa-brands fa-tiktok"></i><span className="sr-only">TikTok</span></a></li>
           </ul>
         </div>
       </nav>
     </header>
   );
+
+  // <li><a href="https://discord.com/invite/rDfrqNykzM" className="github"><i className="fa-brands fa-discord"></i><span className="sr-only">Discord</span></a></li>
 
   function handleClick() {
     const nav = document.querySelector("#primary-navigation");
