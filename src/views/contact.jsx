@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {send} from 'emailjs-com';
+import config from '../config.js';
 
 function Contact() {
   const [toSend, setToSend] = useState({
@@ -11,10 +12,10 @@ function Contact() {
   const onSubmit = (e) => {
     e.preventDefault();
     send(
-      'service_kah3hlj',
-      'template_7wnegpk',
+      config.emailjs.id,
+      config.emailjs.template,
       toSend,
-      'I0PzcqCs7sUjaqasL'
+      config.emailjs.key
     )
     .then((response) => {
       console.log('SUCCESS!', response.status,response.text);

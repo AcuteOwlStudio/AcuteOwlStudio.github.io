@@ -1,11 +1,12 @@
 import React, {useState, useEffect} from 'react';
 
 import Post from './components/post.jsx';
+import config from '../config.js';
 
 const contentful = require('contentful');
 const client = contentful.createClient({
-  space: 'jybewjgo4crz',
-  accessToken: 'zmFBK7EnCw4AAzMPE5VPbTrICLOn_NPLAaQs23JPAYk',
+  space: config.contentful.space,
+  accessToken: config.contentful.accessToken,
 });
 
 function Blog() {
