@@ -1,5 +1,4 @@
 import React from "react";
-import {Link} from 'react-router-dom';
 
 function Game(props) {
   let dataSet = props.dataSet;
@@ -19,11 +18,11 @@ function Game(props) {
           </div>
 
           <div className="gameButtons">
-            <a className="gameCardButton">
+            <a className="gameCardButton" href="https://discord.com/invite/rDfrqNykzM" target="_blank">
               <i className="fa-brands fa-discord"></i><span className="sr-only">Discord</span>
               <span className="hideDesktop"> Discord </span>
             </a>
-            <a className="gameCardButton">
+            <a className="gameCardButton" href={dataSet.steam} target="_blank">
               <i className="fa-brands fa-steam"></i><span className="sr-only">Steam</span>
               <span> Steam</span>
             </a>
@@ -34,6 +33,9 @@ function Game(props) {
 
         <iframe height="250" src={dataSet.video} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         <p>{dataSet.description}</p>
+        <a href={dataSet.audio} target="_blank" className="github button"><i className="fa-brands fa-bandcamp"></i><span> Sound Track</span></a>
+        <br/>
+        <br/>
         <br/>
 
       </div>

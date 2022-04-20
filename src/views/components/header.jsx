@@ -16,9 +16,12 @@ function Header() {
             <li><Link to="/Blog">Blog</Link></li>
             <li><Link to="/About">About</Link></li>
             <li><Link to="/Contact">Contact</Link></li>
-            <li><a href="https://www.youtube.com/channel/UC5LV-fAAlBFpidSv1wktJeA" target="_blank" className="github"><i className="fa-brands fa-youtube"></i><span className="sr-only">Youtube</span></a></li>
-            <li><a href="https://www.instagram.com/acute_owl_studio/?hl=en" target="_blank" className="github"><i className="fa-brands fa-instagram"></i><span className="sr-only">Instagram</span></a></li>
-            <li><a href="https://www.tiktok.com/@acuteowlstudio" target="_blank" className="github"><i className="fa-brands fa-tiktok"></i><span className="sr-only">TikTok</span></a></li>
+            <li><a href="https://discord.com/invite/rDfrqNykzM" target="_blank" className="github"><i className="fa-brands fa-discord"></i><span className="hideDesktop"> Discord</span></a></li>
+            <li><a href="https://www.youtube.com/channel/UC5LV-fAAlBFpidSv1wktJeA" target="_blank" className="github"><i className="fa-brands fa-youtube"></i><span className="hideDesktop"> Youtube</span></a></li>
+            <li><a href="https://www.twitch.tv/acuteowlstudio" target="_blank" className="github"><i className="fa-brands fa-twitch"></i><span className="hideDesktop"> Twitch</span></a></li>
+            <li><a href="https://twitter.com/AcuteOwlStudio" target="_blank" className="github"><i className="fa-brands fa-twitter"></i><span className="hideDesktop"> Twitter</span></a></li>
+            <li><a href="https://www.instagram.com/acute_owl_studio/?hl=en" target="_blank" className="github"><i className="fa-brands fa-instagram"></i><span className="hideDesktop"> Instagram</span></a></li>
+            <li><a href="https://www.tiktok.com/@acuteowlstudio" target="_blank" className="github"><i className="fa-brands fa-tiktok"></i><span className="hideDesktop"> TikTok</span></a></li>
           </ul>
         </div>
       </nav>

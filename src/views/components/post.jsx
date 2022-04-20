@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
+import {documentToReactComponents} from '@contentful/rich-text-react-renderer';
+import { INLINES, BLOCKS } from '@contentful/rich-text-types';
 
 function Post(props) {
   const [date, setDate] = useState();
 
   var entry = props.data;
-  // parseDate(entry.fields.publishDate);
+  console.log(entry);
 
   return (
     <div className="postBack">
@@ -15,9 +17,7 @@ function Post(props) {
 
       <hr/>
       <div className="postContents">
-        {entry.fields.message.content.map( (paragraph) => (
-          <p>{paragraph.content[0].value}</p>
-        ))}
+        {documentToReactComponents(entry.fields.message, options)}
       </div>
     </div>
   );
@@ -27,5 +27,21 @@ function Post(props) {
     return(date[0]);
   }
 }
+
+const options = {
+  renderNode: {
+    [INLINES.HYPERLINK]: (node) => {
+      const link = node.data.uri;
+      const text = node.content[0].value;
+      return <a className="blogLink" href={link} target="_blank">{text}</a>
+    },
+    [BLOCKS.EMBEDDED_ASSET]: (node) => {
+      const desc = node.data.target.fields.title;
+      const url = node.data.target.fields.file.url;
+      return <img className="blogImg" src={url} alt={desc}/>
+    }
+  }
+}
+
 
 export default Post;

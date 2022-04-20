@@ -18,7 +18,7 @@ function Main(props) {
       <Route exact path="/Blog" element={<Blog/>} />
       <Route exact path="/Contact" element={<Contact/>} />
       <Route exact path="/" element={<Home/>}/>
-      <Route path="/" component={<Navigate replace to ="/" />} />
+      <Route path="/*" component={<Navigate replace to ="/" />} />
     </Routes>
   );
 }
