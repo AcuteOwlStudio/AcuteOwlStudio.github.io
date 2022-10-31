@@ -11,6 +11,8 @@ const Data = [
     "steam":"https://store.steampowered.com/app/1739070/Bones_Cafe/",
     "video":"https://www.youtube-nocookie.com/embed/1-iQnh-cH7o",
     "audio":"https://coleharmon.bandcamp.com/releases",
+    "pressImages":"./games/bonescafe/images.rar",
+    "pressLogos":"./games/bonescafe/logos.rar",
     "tags": [
       "Cooking",
       "Co-op",

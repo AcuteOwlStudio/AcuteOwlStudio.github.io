@@ -185,11 +185,19 @@ footer {
   }
 }
 
+.mTop {
+  margin-top: 2em;
+}
 .xPadding {
   padding: 0 2em;
 }
 .bPadding {
   padding-bottom: 1em;
+}
+
+.credits {
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: 45rem){
@@ -327,6 +335,9 @@ iframe {
   align-self: flex-end;
   margin-bottom: 2px;
   margin-left: auto;
+}
+.postContents ul {
+  padding-left: 1em;
 }
 .blogImg {
   display: block;

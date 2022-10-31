@@ -3,6 +3,7 @@ import {send} from 'emailjs-com';
 import config from '../config.js';
 
 function Contact() {
+
   const [toSend, setToSend] = useState({
     from_name: '',
     email: '',
@@ -58,7 +59,6 @@ function Contact() {
       </main>
     </div>
   );
-
 
 }
 

@@ -38,7 +38,11 @@ const options = {
     [BLOCKS.EMBEDDED_ASSET]: (node) => {
       const desc = node.data.target.fields.title;
       const url = node.data.target.fields.file.url;
-      return <img className="blogImg" src={url} alt={desc}/>
+      return (
+        <a href={url} target="_blank">
+          <img className="blogImg" src={url} alt={desc}/>
+        </a>
+      );
     }
   }
 }
